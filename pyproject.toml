@@ -1,0 +1,29 @@
+[project]
+name = "pvsnp"
+version = "0.1.0"
+description = "P vs NP Research Workbench"
+requires-python = ">=3.9"
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.32.0",
+    "aiosqlite>=0.20.0",
+    "numpy>=1.24.0",
+    "scipy>=1.11.0",
+    "networkx>=3.1",
+    "python-multipart>=0.0.12",
+    "websockets>=13.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.24.0",
+    "httpx>=0.27.0",
+]
+
+[tool.setuptools.packages.find]
+include = ["pvsnp*"]
+
+[build-system]
+requires = ["setuptools>=64.0"]
+build-backend = "setuptools.build_meta"
